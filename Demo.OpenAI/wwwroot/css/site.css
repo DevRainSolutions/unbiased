@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.divider-center {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #8c98a4
+}
+
+    .divider-center::after, .divider-center::before {
+        -ms-flex: 1 1 0%;
+        flex: 1 1 0%;
+        border-top: .0625rem solid rgba(231,234,243,.7);
+        margin-top: .0625rem;
+        content: ''
+    }
+
+    .divider-center::before {
+        margin-right: 1.5rem
+    }
+
+    .divider-center::after {
+        margin-left: 1.5rem
+    }

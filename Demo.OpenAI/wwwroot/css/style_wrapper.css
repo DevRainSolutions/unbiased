@@ -1,0 +1,35 @@
+
+.wrapper {
+    height: 90vh;
+}
+
+
+
+
+.input-form__title{
+    width: 100% ;
+}
+
+.input-form__confirm{
+    width: 150px;
+}
+
+.analyzed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rewrote {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+textarea {
+    border-radius: 10px;
+    width: 100%;
+    resize: none;
+    height: 35vh;
+    
+}

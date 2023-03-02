@@ -1,0 +1,38 @@
+﻿@page
+@using Markdig
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <form method="get"  class="row" style="gap:10px">
+        <div class="row col-md-4">
+            <input class="input-form__title" name="jobTitle" type="text" placeholder="Job Title" value="@Model.JobTitle" required>
+        </div>
+        <div class="row col-md-12">
+            <textarea class="input-form__text" name="jobDetails" cols="auto" rows="auto" placeholder="Job details" required>@Model.JobDetails</textarea>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <button type="submit" class="btn btn-danger" style="width: 200px;">
+                Submit
+            </button>
+        </div>
+    </form>
+    <div class="row" >
+        @if(Model.Analyzed != null)
+        {
+            <div class="col-md-3">
+                <h3 class="analyzed__title">Analysis</h3>
+                <div style="white-space: pre-wrap;">@Model.Analyzed</div>
+            </div>
+        }
+        @if(Model.Rewrote != null)
+        {
+            <div class="col-md-9">
+                <h3 class="rewrote__title">Fixed job description</h3>
+                <div style="white-space: pre-wrap;">@Model.Rewrote</div>
+            </div>
+        }
+    </div>
+</div>
